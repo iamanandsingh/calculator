@@ -11,10 +11,7 @@ class MyCal extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Calculator',
-      theme: ThemeData(
-        primarySwatch: Colors.amber,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+
       home: MyHomePage(),
     );
   }
@@ -92,7 +89,6 @@ class _MyHomePageState extends State<MyHomePage> {
             side: BorderSide(
           color: Colors.white,
           width: 1,
-          style: BorderStyle.solid,
         )),
         onPressed: () => buttonpressed(name),
         child: Text(
@@ -108,6 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Simple Calculator"),
+        backgroundColor: Colors.purple[900],
       ),
       body: Column(
         children: [
@@ -127,36 +124,36 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(fontSize: resultsize),
             ),
           ),
-          Expanded(child: Divider(color: Colors.amber)),
+          Expanded(child: Divider(color: Colors.white)),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
             Container(
               width: MediaQuery.of(context).size.width * .75,
               child: Table(
                 children: [
                   TableRow(children: [
-                    button("C", Colors.red, 1),
-                    button("⌫", Colors.blue, 1),
-                    button("÷", Colors.blue, 1),
+                    button("C", Colors.purple[900], 1),
+                    button("⌫", Colors.purple[900], 1),
+                    button("÷", Colors.deepPurple[800], 1),
                   ]),
                   TableRow(children: [
-                    button("7", Colors.grey, 1),
-                    button("8", Colors.grey, 1),
-                    button("9", Colors.grey, 1),
+                    button("7", Colors.purple[200], 1),
+                    button("8", Colors.purple[200], 1),
+                    button("9", Colors.purple[200], 1),
                   ]),
                   TableRow(children: [
-                    button("4", Colors.grey, 1),
-                    button("5", Colors.grey, 1),
-                    button("6", Colors.grey, 1),
+                    button("4", Colors.purple[200], 1),
+                    button("5", Colors.purple[200], 1),
+                    button("6", Colors.purple[200], 1),
                   ]),
                   TableRow(children: [
-                    button("1", Colors.grey, 1),
-                    button("2", Colors.grey, 1),
-                    button("3", Colors.grey, 1),
+                    button("1", Colors.purple[200], 1),
+                    button("2", Colors.purple[200], 1),
+                    button("3", Colors.purple[200], 1),
                   ]),
                   TableRow(children: [
-                    button("0", Colors.grey, 1),
-                    button("00", Colors.grey, 1),
-                    button(".", Colors.grey, 1),
+                    button("0", Colors.purple[200], 1),
+                    button("00", Colors.purple[200], 1),
+                    button(".", Colors.purple[200], 1),
                   ]),
                 ],
               ),
@@ -166,16 +163,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Table(
                   children: [
                     TableRow(children: [
-                      button("+", Colors.blue, 1),
+                      button("+", Colors.deepPurple[800], 1),
                     ]),
                     TableRow(children: [
-                      button("x", Colors.blue, 1),
+                      button("x", Colors.deepPurple[800], 1),
                     ]),
                     TableRow(children: [
-                      button("-", Colors.blue, 1),
+                      button("-", Colors.deepPurple[800], 1),
                     ]),
                     TableRow(children: [
-                      button("=", Colors.red, 2),
+                      button("=", Colors.purple[900], 2),
                     ]),
                   ],
                 )),
