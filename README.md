@@ -1,4 +1,4 @@
-MINI CALCULATOR
+## MINI CALCULATOR
 
 Its a mini calculator with simple functions- addition,subtraction, multiplication and division.
 I have focused particulaly on the UI. Some of the UI features are-
